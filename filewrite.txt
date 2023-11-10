@@ -1,0 +1,2 @@
+W is used to add new data , however previous data gets removed
+This data is added without deleting prev data
