@@ -1,0 +1,1041 @@
+high-level, interpreted,platform-independent which makes debugging very easy. interactive,  
+Dynamically typed(no need to declare the data type explicitly) general purpose prog language 
+simplicity and readability  using indentation and a clear syntax..  
+supports an object-oriented programming approach as well as a functional programming approach.
+=============================================================
+
+interpreter:
+program that directly executes Python code line by line, converting it into machine-understandable instructions without the need for compilation. 
+------------------------------------------
+variable:
+name that references a value in memory(temporary storage space). 
+stores data that can be manipulated and used in the program. 
+------------------------------------------
+Data types:
+define the kind of data a variable can hold. Examples include integers, floats, strings, lists, dictionaries, and more 
+------------------------------------------
+operator:
+symbol that performs operations on one or more operands. 
+------------------------------------------
+expression:
+combination of values and operators that, when evaluated, results in a value. 
+It can be as simple as a single value or complex with multiple operators. 
+------------------------------------------
+Control structures:
+determine the flow of a program. 
+Examples include if statements (conditional branching) and loops (repeated execution). 
+------------------------------------------
+Indentation:
+spaces or tabs used at the beginning of a code line to define code blocks.
+proper indentation is crucial for code readability and structure. 
+------------------------------------------
+class:
+blueprint for creating objects.
+defines attributes (data) and methods (functions) that the objects will have. 
+enable the implementation of Object-Oriented Programming (OOP) principles. 
+------------------------------------------
+Object:
+an instance of a class. 
+It contains both data (attributes) and behavior (methods) defined in the class. 
+Objects allow you to work with data and actions as a single unit. 
+------------------------------------------
+attribute:
+piece of data associated with an object.
+represents the object's characteristics or properties.
+defined within classes and can hold various data types. 
+------------------------------------------
+method:
+function defined within a class.
+defines actions that objects of that class can perform. 
+operate on the attributes of an object and can modify its state. 
+------------------------------------------
+IDENTIFIER:
+name used to identify class, variable, module or other objectA-z, a-z,_
+class names start with uppercase
+other names start with lowercase
+_identifier private
+__identifier strongly private
+------------------------------------------
+KEYWORDS:
+reserved words that we cannot use as identifier
+------------------------------------------
+Encapsulation:
+an OOP principle that bundles data (attributes) and methods that operate on the data within a single unit (object). 
+promotes data hiding and prevents direct access to internal implementation details. 
+------------------------------------------
+Inheritance:
+an OOP concept where a new class (child class) can inherit attributes and methods from an existing class (parent class). 
+promotes code reusability and allows extending or modifying behavior without affecting the parent class. 
+------------------------------------------
+Polymorphism:
+allows objects of different classes to be treated as instances of the same class through method overriding and method overloading. 
+simplifies code and enhances flexibility by enabling consistent interaction with different objects. 
+
+  
+=============================================================
+Find python path 
+1.
+>>python -c "import os, sys; print(os.path.dirname(sys.executable))" 
+C:\Users\suraj\AppData\Local\Programs\Python\Python310 
+2.
+C:\Users\suraj>python
+import sys 
+locate_python = sys.exec_prefix 
+print(locate_python) 
+C:\Users\suraj\AppData\Local\Programs\Python\Python310 
+
+------------------------------------------
+
+python --version 
+Python 3.10.8 
+
+ 
+=============================================================
+ 
+
+PYTHON COMMENTS:
+Non executable code statement used to explain code 
+Single line comment-  double or single quotes  
+Multi line comment-   Triple set of single or double quotes  
+(VS CODE) ctrl+/ for adding comment 
+=============================================================
+
+VARIABLE:
+container/placeholder in memory that holds data.
+each variable has its associated data type which is responsible for storing certainkind of data 
+in Python it is not required to declare the data type of a variable beforehand 
+var is assigned an address in the memory and the value  is assigned to var1
+can not start with a number. no spaces
+Variable names are case-sensitive
+
+------------------------------------------
+DATA TYPE:
+1. Numeric data:  int, float, complex 
+    int: 3, -8, 0 
+    b= 2304  
+    float: 7.349, -9.0, 0.0000001 
+    c= 54.34  
+    complex: 6 + 2i 
+    d= complex(5,6)  
+    long(octal and hex)
+ 
+
+2. Text data: str 
+    str: "Hello World!!!", "Python Programming" 
+    a="Suraj "  
+    [:]used for slicing
+    + for concatenation
+    * for repitition
+
+ 
+
+3. Boolean data: 
+    Boolean data consists of values True or False. 
+    e= True  
+
+ 
+
+4. Sequenced data: list, tuple 
+    list: A list is an ordered collection of data with elements separated by a comma and enclosed within square brackets. Lists are mutable and can be modified after creation. 
+    [1, 2.3, 'suraj', ('S', 'T', 'D'), [5, 6]]
+
+    Tuple: A tuple is an ordered collection of data with elements separated by a comma and enclosed within parentheses. 
+    Tuples are immutable and can not be modified after creation. 
+     ('Suraj', 123, [1, 'sur'])
+
+ 
+
+5. Mapped data: dict 
+    dict: A dictionary is an unordered collection of data containing a key:value pair.  
+    The key:value pairs are enclosed within curly brackets. 
+    {'name': 'suraj', 'surname': 'damgude'}
+
+6. None:
+    f= None  
+------------------------------------------
+type(variablename):
+data type of variable
+=============================================================
+Type casting: 
+Conversion of data types.    
+    Excpicit: Done by python as per requirement 
+    int(), float(), hex(), oct(), str()
+
+    Implicit: Done by python automatically  
+=============================================================
+Mutable & Immutable:
+once object is created, unique id is assigned to it
+Mutable objects are the objects whose value can be changed without changing the id of an object.
+
+=============================================================
+Global Scope :
+
+
+A variable/name declared in the top-level segment (__main__) of a program is said to have a global scope and is usable inside the whole program (Can be accessed from anywhere in the program).
+
+In Python, a variable declared outside a function is known as a global variable. This means that a global variable can be accessed from inside or outside of the function.
+=============================================================
+PYTHON INPUT:
+input("enter number")
+
+# Program take space-separated input in one line in Python
+x, y = input().split()
+------------------------------------------
+PYTHON OUTPUT:PRINT STATEMENT:
+print(objects, sep=separator, end=end, file=file, flush=flush) 
+file is object where values are printed
+default is sys.stdout(screen)
+=============================================================
+Escape sequence: 
+To insert characters that cannot be directly used in a string 
+\’ 
+Single quote 
+
+\\’  
+Double quote 
+
+\\ 
+Backslash 
+
+\n 
+Newline 
+
+\r 
+Carriage Return 
+
+\t 
+Horizontal Tab 
+
+\b 
+Backspace 
+
+\f 
+Formfeed 
+
+\v 
+Vertical Tab 
+
+\0 
+Null Character 
+
+\N{Name} 
+Unicode character Database named lookup 
+
+\uxxxxxxxx 
+Unicode character with a 16-bit hex value 
+
+\Uxxxxxxxx 
+Unicode character with a 32-bit hex value 
+
+\000 
+Character with octal value ooo 
+
+\xhh 
+Character with hex value hh 
+=============================================================
+Arithmetic Operators: 
++ : Addition 
+- : Subtraction 
+* : Multiplication 
+/ : Division (float result) 
+// : Division (floor division) 
+% : Modulus (remainder) 
+** : Exponentiation 
+------------------------------------------
+Assignment Operators: 
+= : Assign value 
++= : Add and assign 
+-= : Subtract and assign 
+*= : Multiply and assign 
+/= : Divide and assign 
+//= : Floor divide and assign 
+%= : Modulus and assign 
+**= : Exponentiate and assign 
+------------------------------------------
+Comparison Operators: 
+== : Equal to 
+!= : Not equal to 
+< : Less than 
+> : Greater than 
+<= : Less than or equal to 
+>= : Greater than or equal to 
+------------------------------------------
+Logical Operators: 
+
+and : Logical AND 
+or : Logical OR 
+not : Logical NOT 
+------------------------------------------
+Bitwise Operators: 
+
+& : Bitwise AND 
+| : Bitwise OR 
+^ : Bitwise XOR 
+~ : Bitwise NOT 
+<< : Left shift 
+>> : Right shift 
+------------------------------------------
+Membership Operators: 
+in : Membership test (element in sequence) 
+not in : Membership test (element not in sequence) 
+------------------------------------------
+Identity Operators: 
+is : Identity test (objects are the same) 
+is not : Identity test (objects are not the same) 
+------------------------------------------
+Ternary Conditional Operator: 
+x if condition else y : Ternary conditional expression 
+------------------------------------------
+Unary Operators: 
++ : Unary plus 
+- : Unary minus 
+------------------------------------------
+Other Operators: 
+() : Parentheses for grouping 
+[] : Brackets for lists 
+{} : Braces for dictionaries 
+: : Colon for slicing and defining blocks 
+, : Comma to separate items in lists, tuples, etc. 
+. : Dot for attribute access 
+@ : Matrix multiplication (Python 3.5+) 
+... : Ellipsis placeholder 
+await : Used with asynchronous programming (Python 3.5+) 
+=============================================================
+
+Strings:
+sequence data type
+IMMUTABLE(cannot edit or delete any character from a string)
+indexing allowed
+
+
+upper() : 
+converts a string to upper case. 
+
+lower() 
+converts a string to lower case. 
+
+replace("target", 
+"replacewith") : 
+replaces all occurences of a string with another string. 
+
+capitalize() : 
+turns only the first character of the string to uppercase and the rest other characters of the string are turned to lowercase.  
+
+title() : 
+capitalizes each letter of the word within the string. 
+
+swapcase() : 
+changes the character casing of the string. Upper case are converted to lower case and lower case to upper case. 
+
+index() : 
+searches for the first occurrence of the given value and returns the index where it is present. 
+If given value is absent from the string then raise an exception. 
+
+find() :
+searches for the first occurrence of the given value and returns the index where it is present.  
+If given value is absent from the string then return -1. 
+
+count() : 
+returns the number of times the given value has occurred within the given string. 
+
+strip() : 
+removes any white spaces before and after the string. 
+
+rstrip() :  
+removes any trailing characters.  
+
+split() : 
+splits the given string at the specified instance and returns the separated strings as list items. 
+
+center() : 
+aligns the string to the center as per the parameters given by the user. 
+
+endswith() : 
+checks if the string ends with a given value.  
+If yes then return True, else return False. 
+We can even also check for a value in-between the string by providing start and end index positions. 
+
+isalnum() : 
+returns True only if the entire string only consists of A-Z, a-z, 0-9.  
+
+If any other characters or punctuations are present, then it returns False. 
+
+isalpha() : 
+returns True only if the entire string only consists of A-Z, a-z.  
+
+If any other characters or punctuations or numbers(0-9) are present, then it returns False. 
+
+islower() : 
+returns True if all the characters in the string are lower case, else it returns False. 
+
+isprintable() : 
+returns True if all the values within the given string are printable, if not, then return False. 
+
+isspace() : 
+returns True only and only if the string contains only white spaces, else returns False. 
+
+istitle() : 
+returns True only if the first letter of each word of the string is capitalized,  
+else it returns False. 
+
+isupper() : 
+returns True if all the characters in the string are upper case, else it returns False. 
+
+startswith() : 
+checks if the string starts with a given value. If yes then return True, else return False. 
+------------------------------------------
+
+f-strings in python(Literal String Interpolation) 
+
+prefix the string with the letter 'f' 
+Works like string.format() 
+We can assign index for arguments 
+Use double curly brackets to print as raw string so that the argument name is shown and not the argument value 
+
+=============================================================
+
+LISTS:
+Ordered collection of data items. 
+separated by commas and enclosed within square brackets [].
+changeable
+Multiple data types can be used in a signle list 
+
+    (mutable)adding new element does not change id of original list
+
+Creation of list 
+List = [Expression(item) for item in iterable if Condition] 
+lst= [s for s in range(6) ] 
+print(lst) 
+Suraj=(1,2,3,4,5,6) 
+nw=[a for a in Suraj] 
+print(nw) 
+ds=[b for b in Suraj if b%2==0] 
+print(ds) 
+
+List Methods 
+
+ 
+
+sort(): 
+sorts the list in ascending order.  
+The original list is updated 
+
+reverse(): 
+Reverses list item order 
+
+count() 
+Gives no of occcurances 
+
+append(): 
+Adds to the end of list 
+
+insert() : 
+Adds item to specified position 
+
+clear(): 
+Removes all the elements from the list 
+
+pop() 
+Removes the element at the specified position 
+
+remove() 
+Removes the item with the specified value 
+
+copy() 
+Returns a copy of the list 
+
+index() 
+Returns the index of the first element with the specified value 
+
+extend() 
+Add the elements of a list (or any iterable), to the end of the current list 
+=============================================================
+Dictionaries:(hash tables)
+Dictionaries are ordered collection of data items.  
+They store multiple items in a single variable.  
+Dictionary items are key-value pairs  
+separated by commas and enclosed within curly brackets {}. 
+
+Pop() 
+The pop() method removes the key-value pair whose key is passed as a parameter. 
+
+
+Popitem() 
+removes the last key-value pair from the dictionary. 
+
+del() 
+Deletes the  item 
+If item is not specified. It delets entire dictionary 
+
+Clear() 
+The clear() method removes all the items from the list. 
+dictionary still exists after using clear(), but it becomes empty.
+
+update() 
+updates the value of the key provided to it if the item already exists in the dictionary,  
+else it creates a new key-value pair. 
+=============================================================
+Tuples
+Immutable- ordered collection of data items 
+separated by commas and enclosed within round brackets (). 
+Tuples are unchangeable meaning we can not alter them after creation. 
+Multiple data types can be used in a signle list 
+Tuples allow indexing 
+Tuple[start : end : jumpIndex ]
+
+we convert them to list to change them
+
+
+index()  
+tuple.index(element, start, end) 
+Returns the index of the first element with the specified value  
+
+count() 
+Gives no of occcurances  
+
+=============================================================
+SETS:
+Unordered collection of data items.  
+Store multiple items in a single variable. 
+Separated by commas and enclosed within curly brackets {}.  
+Mutable. 
+Indexing is not possible 
+Sets do not allow duplicates 
+
+add('')  
+adds an item from set
+
+remove('')  
+removes an item from set
+
+del 
+deletes entire set
+
+clear()
+makes set empty
+
+remove()/discard() 
+remove items form set.  
+if we try to delete an item which is not present in set, then remove() raises an error,  
+whereas discard() does not raise any error. 
+
+
+
+Update()  
+Adds to existing set from another set 
+cities.update(cities2) 
+
+union()  
+Adds two sets to new set and returns a new set  
+cities3 = cities.union(cities2)
+
+Intersection()  
+prints only items that are similar to both the sets 
+
+Intersection_update()  
+prints only items that are similar to both the sets To in first set
+second set retains all the items
+
+Symmetric_difference()  
+prints items that are not in other set to a new set
+
+Symmetric_difference_update()    
+prints items that are not in other set o first set
+second set retains all the items
+
+Difference()  
+prints only items that are only present in the original set 
+returns a new set 
+
+difference_update()  
+prints only items that are only present in the original set 
+To existing set 
+=============================================================
+CONTROL FLOW 
+
+if-else Statements 
+    To evaluate a signle condition 
+    if the expression evaluates True: 
+        Execute the block of code inside if statement. After execution return to the code out of the if……else block. 
+
+
+    if the expression evaluates False: 
+        Execute the block of code inside else statement. After execution return to the code out of the if……else block. 
+------------------------------------------
+elif Statements: 
+     more than one condition 
+------------------------------------------
+Nested if : 
+     if, if-else, elif statements inside each other if statements as well. 
+------------------------------------------
+
+Match case: 
+compare a given variable’s value to different shapes, also referred to as the pattern.  
+The main idea is to keep on comparing the variable with all the present patterns until it fits into one. 
+The match case consists of three main entities : 
+    The match keyword 
+    One or more case clauses 
+    Expression for each case
+
+=============================================================
+For Loop :
+iterate over a sequence of iterable objects 
+Iterating over a sequence is nothing but iterating over strings, lists, tuples, sets and dictionaries.
+
+name = 'Abhishek' 
+for i in name: 
+    print(i, end=", ") 
+
+colors = ["Red", "Green", "Blue", "Yellow"] 
+for x in colors: 
+    print(x)
+
+range(): 
+use for loop for a specific number of times
+for k in range(5): 
+    print(k) 
+=============================================================
+While loop :
+execute statements while the condition is True.  
+As soon as the condition becomes False, the interpreter comes out of the while loop. 
+x = 5 
+
+while (x > 0): 
+    print(x) 
+    x = x - 1 
+else: 
+    print('counter is 0') 
+=============================================================
+Do-While loop
+while True: 
+  number = int(input("Enter a positive number: ")) 
+  print(number) 
+  if  number < -1: 
+    break 
+=============================================================
+Break :
+enables a program to skip over a part of the code.  
+A break statement terminates the very loop it lies within. 
+------------------------------------------
+Continue:
+skips the rest of the loop statements and causes the next iteration to occur. 
+for i in range (5): 
+    print(i) 
+
+for i in range (5): 
+    print(i) 
+    if i==2: 
+        break 
+
+for i in range (5): 
+    if i==2: 
+        continue 
+    print(i) 
+------------------------------------------
+PASS:
+Null operator
+notthing happens, 
+
+=============================================================
+else in Loop 
+The else block appears after the body of the loop.  
+The statements in the else block will be executed after all iterations are completed.  
+The program exits the loop only after the else block is executed. 
+
+for counter in sequence: 
+    #Statements inside for loop block 
+else: 
+    #Statements inside else block 
+
+for x in range(5): 
+    print ("iteration no {} in for loop".format(x+1)) 
+else: 
+    print ("else block in loop") 
+print ("Out of loop") 
+
+iteration no 1 in for loop 
+iteration no 2 in for loop 
+iteration no 3 in for loop 
+iteration no 4 in for loop 
+iteration no 5 in for loop 
+else block in loop 
+
+Out of loop 
+
+=============================================================
+Short hand if else: 
+
+There is also a shorthand syntax for the if-else statement that can be used when the condition being tested is simple and the code blocks to be executed are short.  
+You can also have multiple else statements on the same line: 
+
+a = 2 
+b = 330 
+print("A") if a > b else print("B") 
+
+result = value_if_true if condition else value_if_false 
+
+Instead of 
+if condition: 
+result = value_if_true 
+else: 
+result = value_if_false 
+================================================ 
+
+ FUNCTIONS:
+block of code that performs a specific task whenever it is called.  
+Processes data, which can be provided as a parameter 
+It may return output 
+
+Built-in functions 
+User-defined functions 
+
+ 
+
+User defined function: 
+def function_name(parameters): 
+    pass 
+    # Code and Statements 
+
+
+Calling a function: 
+by giving the function name, followed by parameters (if any) in the parenthesis. 
+================================================ 
+
+Function Arguments and return statement: 
+
+Default Arguments 
+Keyword Arguments 
+Variable length Arguments 
+Required Arguments 
+
+Default arguments: 
+Setting a default value for argument 
+If not specified in calling , default is taken  
+Must be defined after the positional/required arguments 
+
+------------------------------------------
+Keyword arguments: 
+provide arguments with key = value, 
+Order of providing arguments is not required as parameter name is used for recognizing argument 
+
+------------------------------------------
+Required arguments: 
+If arguments are not passed as key value pair, the order is essesntial 
+No. Of arguments must match with function definition 
+Also known as positional arguments 
+------------------------------------------
+
+Variable-length arguments: 
+Passing more arguments than those defined in function 
+
+Arbitrary Arguments: 
+
+pass a * before the parameter name while defining function.  
+The function accesses the arguments by processing them in the form of tuple. 
+
+
+ ------------------------------------------
+
+Keyword Arbitrary Arguments: 
+pass a * *before the parameter name while defining function.  
+The function accesses the arguments by processing them in the form of dictionary. 
+
+Variable-length arguments: 
+
+Instead of printing, return statement stores value in the function and assigns it to the variable assigned for calling the function  
+
+def avg(*numbers):  
+
+    print(type(numbers))  
+
+    sum=0  
+
+    for i in numbers:  
+
+        sum=sum+i  
+
+    return sum/len(numbers) 
+
+c=avg(12.4854,54,58,56)  
+
+print(c) 
+
+<class 'tuple'> 
+
+45.12135 
+
+================================================ 
+
+ 
+
+Lambda Functions: 
+
+Instead of printing, return 
+
+Is a function with no name, an anonymous function. 
+Keyword lambda is used to define this type of function. 
+A lambda function can have more than one arguments and return only one expression. 
+It implicitly returns a result. 
+Generally used as an argument to a function which takes a function name as a parameter. 
+should write lambda function only when we do not have functionality available from the language 
+
+------------------------------------------
+
+Map Function: 
+Map function takes in a function and a list as an argument. 
+Map function applies the function (passed as parameter – we can pass lambda function as well) to each element of a list (the other parameter). 
+It returns an iterator of the elements iterated through 
+------------------------------------------
+
+Filter Function: 
+Instead of printing, return 
+Filter function takes in a function and a list as an argument. 
+Filter function applies the function (passed as parameter – we can pass lambda function as well) to each element of a list (the other parameter). 
+It returns an iterator of the elements iterated through and the function returns true. 
+------------------------------------------
+
+Reduce Function: 
+Instead of printing, return 
+This function is defined in module functools and returns a single value. 
+It takes in a function and a list as an argument. 
+It is applied to all the elements of a list. During the first call, first two elements of list are evaluated. 
+For subsequent calls, resultant of previous call and next element of the list is evaluated. This step repeats till the list exhausts. 
+------------------------------------------
+
+Enumerate Function: 
+Loop over seq data types and perform actions on it with both index and value 
+Gives index along with value 
+================================================ 
+
+ERROR & EXCEPTION HANDLING 
+https://docs.python.org/3/library/exceptions.html 
+
+
+try...except: 
+The code in try block runs when there is no error.  
+If the try block catches the error, then the except block is executed. 
+try: 
+     #statements which could generate  
+     #exception 
+except: 
+     #Soloution of generated exception 
+
+================================================ 
+
+Finally: 
+The finally block is always executed 
+it is generally used for doing the concluding tasks like closing file resources or closing database connection or may be ending the program execution with a delightful message. 
+
+try: 
+#statements which could generate  
+#exception 
+except: 
+#solution of generated exception 
+finally: 
+#block of code which is going to  
+#execute in any situation 
+d
+Enter the index: 1 
+5 
+I am always executed 
+1 
+================================================ 
+Raising custom errors: 
+using the raise keyword. 
+
+class CustomError(Exception): 
+# code ... 
+pass 
+
+try: 
+# code ... 
+
+except CustomError: 
+# code... 
+
+================================================
+FILE OPEARATIONS:
+
+with open(filename, mode)as file:
+f = open('myfile.txt', 'r')
+------------------------------------
+open() function returns a file object that can be used to read from or write to the file, depending on the mode.
+
+Read Mode ('r'):
+Opens the file for reading (default mode).
+The file pointer is positioned at the beginning of the file.
+If the file does not exist, it raises a FileNotFoundError.
+
+Write Mode ('w'):
+Opens the file for writing. If the file exists, it truncates the file (empties its content).
+If the file does not exist, it creates a new file.
+
+Append Mode ('a'):
+Opens the file for appending. It does not truncate the file; instead, it appends content to the end.
+If the file does not exist, it creates a new file.
+
+Binary Mode ('b'):
+This mode is used for opening binary files (e.g., images, audio files).
+It can be combined with read ('rb') or write ('wb') modes.
+
+Text Mode ('t'):
+This mode is used for opening text files (default mode).
+It can be combined with read ('rt') or write ('wt') modes.
+
+Read and Write Mode ('r+', 'w+', 'a+'):
+r+: Opens the file for both reading and writing.
+w+: Opens the file for both reading and writing but truncates the file.
+a+: Opens the file for both reading and writing without truncating the file.
+
+Exclusive Creation ('x'):
+Opens the file for exclusive creation. It creates a new file and raises an error if the file already exists.
+------------------------------------
+with open (file_name, "r") as file:
+    filedata= file.read()
+print("file data read:\n",filedata)
+
+file.read()
+read the entire content of a file_name
+returns it as a single string.
+
+file.readline()
+read a single line
+to read next line, add another method
+
+file.readlines()
+reads all lines one by one
+stored as a list
+each line is a single element of list
+
+size attribute
+o read a specific number of bytes from the file. 
+------------------------------------
+with open (file_name, "w") as file:
+
+file.write("string")
+empties prev data and adds string data 
+
+.writelines(sequence)
+used to write a sequence of strings to a file
+It's often used with a list of strings, where each string in the list represents a line of text to be written to the file.
+This method does not add newline characters between the lines, so you need to include them in the strings if you want line breaks.
+
+lines = ["Line 1\n", "Line 2\n", "Line 3\n"]
+with open('output.txt', 'w') as file:
+    file.writelines(lines)
+------------------------------------
+tell()
+get the current position of the file pointer
+position = file.tell()
+
+seek(position)
+to move pointer to position
+
+flush()
+The flush method is used to flush the internal buffer of the file object. It ensures that any unwritten data is actually written to the file. When you write data to a file, it is often buffered in memory before being written to the file on disk. The flush method forces this buffered data to be written immediately. For example:
+
+truncate() 
+resize a file to a specified size
+ reduce the file's size or remove content beyond a certain point.
+ Any content beyond that size is removed
+================================================
+Random Number
+
+import random
+allows us to create and manipulate random numbers.
+
+random.choice(iterable) :
+returns a random item from a list, tuple, or string.
+
+randrange(start,end,step)
+returns random numbers from a given range while also providing for room for steps.
+
+(random.random())
+generate the float number between 0 and 1.
+
+random.seed(setnumber):
+creates a set
+when we enter seed() before random, it generates the exact same prev set of random numbers
+
+random.shuffle(iterable)
+process of moving the sequence's parts around. 
+rearranges randomly
+
+(random.uniform(5,10))
+generates a floating point random number between the values specified in the inputs
+
+================================================
+import
+loading code from a Python module into the current script. 
+
+import modulename
+
+dir(modulename)
+lists allfunctions and variables available
+
+to use the functions and variables defined in the module in your current script, as well as any additional modules that the imported module may depend on.
+
+to use function n variable from module
+
+var=modulename.function()
+
+to use specific function
+from modulename import function1, function2
+
+import all functions and variables from a module
+from modulename import *
+
+import math as m
+result = m.sqrt(9)
+print(result)  # Output: 3.0
+print(m.pi)
+
+================================================
+The local keyword
+defined within a function
+only accessible within that function. 
+It is created when the function is called and is destroyed when the function returns.
+
+we can convert local to global using global keyboard
+
+The global keyword
+
+
+
+================================================
+
+
+OOP:Object Oriented Programming
+
+
+create own objects having methods and attributes
+
+constructor:creates instance of actyal object
+self keyword is reference to instance
+
+
+attributes in dunder variable are just variables which are used to call the class in main script
+self.attribute name is the actual attribute
+instance.
+
+
+
+class Classname():
+    class object attribute
+    same for any instance of class
+
+    def --init--(self, param1, param2)
+        self.param1 = param1 
+        self.param2 = param2
+
+    def some_method(self):
+    methods
+        #perform action
+        print(self.param1)
+
+
+call attribute
+instancename= Classname(attrinutes)
+instancename.attributename
+call method
+instancename.bark()
